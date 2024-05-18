@@ -1,0 +1,98 @@
+body{
+    background-color: #000;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 1200px;
+    height: 400px;
+    /* background-color: orange; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.textbody{
+    width: 80%;
+    background-color: #fff;
+
+    padding: 50px 10px;
+}
+
+.textbody .textspace{
+    font-size: 30px;
+}
+
+.icon{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-top: 40px;
+
+    cursor: pointer;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+}
+
+.icon::before{
+    content:'';
+    width: 100%;
+    height: 100%;   
+    background-color: #fff;
+    border-radius: 50%;
+
+    position:absolute;
+    left:0;
+    top:0;
+
+    z-index: -1;
+
+}
+
+.icon:hover::before{
+    animation: myani .5s infinite;
+
+}
+
+@keyframes myani{
+    from{
+        transform: scale(0);
+        opacity: 1;
+    }   
+
+    to{
+        transform: scale(1.5);
+        opacity: 0;
+
+    }
+}
+
+.icon .fa-microphone{
+    font-size: 40px;
+    color: steelblue;
+}
+
+.gifts{
+
+    width: 100px;
+    position: absolute;
+    opacity: 0;
+    top:260px;
+}
+
+.container.active .gifts{
+    opacity: 1;
+}
