@@ -26,8 +26,38 @@ body{
     padding: 50px 10px;
 }
 
+
+.container.active .textbody{
+    display: none;
+}
+
 .textbody .textspace{
     font-size: 30px;
+    text-transform: capitalize;
+
+
+    animation-name: textlighting;
+    animation-duration: 0.9s;
+    animation-iteration-count:initial;
+
+    /* ရှိေနတဲ့ animation ကိုခနဖျက်ထားတာ  */
+    /* animation-fill-mode: backwards; */
+}
+
+
+@keyframes textlighting{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0.5;
+        text-shadow: 0 0 20px #fff;
+    }
+
+    100%{
+        opacity: 1;
+    }
 }
 
 .icon{
