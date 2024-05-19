@@ -17,7 +17,7 @@ geticon.addEventListener('click',()=>{
     getrec.start();
 
     getrec.addEventListener('result',(e)=>talking(e));
-    // getcontainer.classList.add('active');
+    getcontainer.classList.add('active');
 
 });
 
